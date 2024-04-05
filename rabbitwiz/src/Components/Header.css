@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&family=Shadows+Into+Light&display=swap");
+
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -10,17 +12,33 @@
   left: 0;
   right: 0;
   z-index: 1;
-}
-
-.header-container h1 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #333;
+  font-family: "Rowdies", sans-serif;
 }
 
 .header-container nav {
   display: flex;
   gap: 20px;
+  margin-right: 50px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.header-container nav a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.header-container nav a:hover {
+  color: #337790;
+}
+
+@media (max-width: 576px) {
+  .header-container nav {
+    flex-direction: row;
+    gap: 10px;
+    margin-right: 0;
+  }
 }
 
 .header-container nav a {
@@ -29,17 +47,33 @@
 }
 
 @media (max-width: 576px) {
-  /* Adjustments for mobile devices */
   .header-container {
-    padding: 0 10px; /* Adjust padding for smaller devices */
+    padding: 0 10px;
   }
 
   .header-container h1 {
-    font-size: 1.2rem; /* Adjust font size for smaller devices */
+    font-size: 1.2rem;
   }
 
   .header-container nav {
-    flex-direction: column; /* Stack navigation links vertically */
-    gap: 10px; /* Add gap between navigation links */
+    flex-direction: row;
+    gap: 10px;
   }
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.header-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #337790;
 }

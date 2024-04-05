@@ -38,7 +38,7 @@
 
 @media (max-width: 768px) {
   .hero-main {
-    height: 100vh;
+    height: 100svh;
     font-size: 1.5rem;
   }
 
@@ -49,7 +49,7 @@
 
 @media (max-width: 576px) {
   .hero-main {
-    height: 100vh;
+    height: 100svh;
     font-size: 1.2rem;
   }
 

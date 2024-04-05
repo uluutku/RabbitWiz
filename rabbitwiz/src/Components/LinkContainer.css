@@ -1,0 +1,44 @@
+.link-container-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  background-color: #f8f8f8;
+  color: #333;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 1;
+}
+
+.box-cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  /* Adjustments for tablets and smaller devices */
+  .link-container-main {
+    height: auto; /* Remove fixed height */
+    padding: 20px; /* Add padding for smaller devices */
+    font-size: 1.5rem; /* Adjust font size for smaller devices */
+  }
+
+  .box-cards-container {
+    flex-direction: column; /* Stack cards vertically on smaller devices */
+    gap: 10px; /* Add gap between cards */
+  }
+}
+
+@media (max-width: 576px) {
+  /* Adjustments for mobile devices */
+  .link-container-main {
+    padding: 10px; /* Further adjust padding for smaller devices */
+    font-size: 1.2rem; /* Further adjust font size for smaller devices */
+  }
+}

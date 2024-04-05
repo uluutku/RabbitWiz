@@ -1,0 +1,45 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.header-container h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.header-container nav {
+  display: flex;
+  gap: 20px;
+}
+
+.header-container nav a {
+  color: #333;
+  text-decoration: none;
+}
+
+@media (max-width: 576px) {
+  /* Adjustments for mobile devices */
+  .header-container {
+    padding: 0 10px; /* Adjust padding for smaller devices */
+  }
+
+  .header-container h1 {
+    font-size: 1.2rem; /* Adjust font size for smaller devices */
+  }
+
+  .header-container nav {
+    flex-direction: column; /* Stack navigation links vertically */
+    gap: 10px; /* Add gap between navigation links */
+  }
+}

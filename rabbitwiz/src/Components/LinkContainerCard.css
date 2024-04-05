@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&family=Shadows+Into+Light&display=swap");
+
+.link-container-box-card-main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  background-color: #f8f8f8;
+  color: #333;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  z-index: 1;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+  font-size: 1.5rem;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #e50914;
+  margin-right: 10px;
+  transition: all 0.5s ease;
+}
+
+.link-container-box-card-main.grayed-out {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.link-container-box-card-main:hover {
+  transform: translateY(-30px);
+  scale: 1.5;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 576px) {
+  /* Adjustments for mobile devices */
+  .link-container-box-card-main {
+    margin: 10px; /* Adjust margin for smaller devices */
+    padding: 10px; /* Adjust padding for smaller devices */
+    font-size: 1.2rem; /* Adjust font size for smaller devices */
+  }
+}

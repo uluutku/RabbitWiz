@@ -2,14 +2,15 @@ import React from "react";
 import "./Footer.css";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import XIcon from "@mui/icons-material/X";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
     <div className="footer-container">
       <div className="nav-container">
         <div className="nav-links">
-          <a href="#home">Main</a>
-          <a href="#about">About Our Rabbit</a>
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
         </div>
       </div>
       <div className="copyright-text">

@@ -13,7 +13,7 @@ function Footer() {
         </div>
       </div>
       <div className="copyright-text">
-        <p>&copy; 2024 RabbitWiz. Made with ❤️</p>
+        <p>&copy; 2024 RabbitWiz. Made with ❤️ by 🐻</p>
       </div>
       <div className="social-media-container">
         <h4>Make sure chase the rabbit on:</h4>

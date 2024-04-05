@@ -1,16 +1,7 @@
 .hero-main {
   background: url(../assets/bg_rabbit.jpg) no-repeat center center/cover;
-  height: 70vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 70svh;
   background-color: rgb(255, 255, 255);
-  color: #ffffff;
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -54,6 +45,6 @@
   }
 
   .hero-image-container {
-    height: 300px;
+    height: 400px;
   }
 }

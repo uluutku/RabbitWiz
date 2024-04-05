@@ -35,7 +35,6 @@ function AboutPage() {
           what's possible.
         </p>
       </div>
-      <FAQSection />
     </div>
   );
 }

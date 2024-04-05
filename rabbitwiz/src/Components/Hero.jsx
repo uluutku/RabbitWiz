@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Hero.css";
-import heroImage from "../assets/single_rabbit_v2.png";
+import heroImage from "../assets/single_rabbit_v3.png";
 import CircularProgress from "@mui/material/CircularProgress";
 
 function Hero() {

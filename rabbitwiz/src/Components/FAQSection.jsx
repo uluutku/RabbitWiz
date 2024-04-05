@@ -11,7 +11,7 @@ function FAQSection() {
         className="faq-toggle-button"
         onClick={() => setIsFAQVisible(!isFAQVisible)}
       >
-        {isFAQVisible ? "Hide FAQ" : "Show FAQ"}
+        {isFAQVisible ? "Hide FAQ" : "If you have any questions, click here!"}
       </button>
       {isFAQVisible && (
         <div className="faq-content">

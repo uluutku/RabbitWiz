@@ -1,8 +1,5 @@
-// AboutPage.jsx
-
 import React from "react";
 import "./AboutPage.css";
-import FAQSection from "../Components/FAQSection";
 
 function AboutPage() {
   return (

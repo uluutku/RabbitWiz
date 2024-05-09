@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Hero.css";
 import heroImage from "../assets/single_rabbit_v4.png";
 import CircularProgress from "@mui/material/CircularProgress";

@@ -1,24 +1,18 @@
-import React from "react";
 import "./LinkContainerCard.css";
 
-function LinkContainerCard({ cardTitle, active, font, grayedOut }) {
-  const handleLinkClick = () => {
-    if (active) {
-      window.open("http://rabbitflix.vercel.app", "_blank");
-    }
-  };
-
+function LinkContainerCard({ title, imageUrl, description, url }) {
   return (
     <div
-      className={`link-container-box-card-main ${
-        grayedOut ? "grayed-out" : ""
-      }`}
-      onClick={handleLinkClick}
-      style={{ fontFamily: font }}
+      className="link-container-card"
+      onClick={() => window.open(url, "_blank")}
     >
-      <div className="link-box">
-        <div className="link-box-title">
-          <h2>{cardTitle}</h2>
+      <div
+        className="card-background"
+        style={{ backgroundImage: `url(${imageUrl})` }}
+      >
+        <div className="card-content">
+          <h2>{title}</h2>
+          <p>{description}</p>
         </div>
       </div>
     </div>

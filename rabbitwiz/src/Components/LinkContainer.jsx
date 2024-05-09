@@ -1,35 +1,30 @@
-import React from "react";
-import "./LinkContainer.css";
 import LinkContainerCard from "./LinkContainerCard";
-import { Divider } from "@mui/material";
+import "./LinkContainer.css";
+import RabbitWizThumb from "../assets/rabbit-wiz-thumb.jpg";
 
 function LinkContainer() {
+  // Sample data, replace or fetch as required
+  const links = [
+    {
+      title: "RabbitFlix",
+      url: "http://rabbitflix.vercel.app",
+      img: RabbitWizThumb,
+      desc: "Stream your favorite shows with a magical twist!",
+    },
+    // Add more link objects here
+  ];
+
   return (
     <div className="link-container-main">
-      <div className="box-cards-container">
-        <LinkContainerCard cardTitle={"🐰 RABBITFLIX"} active={true} />
-        <Divider orientation="vertical" flexItem />
+      {links.map((link) => (
         <LinkContainerCard
-          cardTitle={"COMING SOON"}
-          active={false}
-          font={"Rowdies"}
-          grayedOut={true}
+          key={link.title}
+          title={link.title}
+          imageUrl={link.img}
+          description={link.desc}
+          url={link.url}
         />
-        <Divider orientation="vertical" flexItem />
-        <LinkContainerCard
-          cardTitle={"COMING SOON"}
-          active={false}
-          font={"Rowdies"}
-          grayedOut={true}
-        />
-        <Divider orientation="vertical" flexItem />
-        <LinkContainerCard
-          cardTitle={"COMING SOON"}
-          active={false}
-          font={"Rowdies"}
-          grayedOut={true}
-        />
-      </div>
+      ))}
     </div>
   );
 }

@@ -15,7 +15,7 @@ function Footer() {
       </div>
       <div className="copyright-text">
         <p>
-          &copy; 2024 RabbitFlix. Made with ❤️ by{" "}
+          &copy; 2024 RabbitWiz. Made with ❤️ by{" "}
           <a
             href="http://uxu.epizy.com/sites/iPortfolio/index.html"
             target="_blank"

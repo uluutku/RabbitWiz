@@ -1,5 +1,4 @@
 import LinkContainerCard from "./LinkContainerCard";
-import "./LinkContainer.css";
 import RabbitFlixThumb from "../assets/rabbitflix-new-thumb.jpg";
 import PawPickerThumb from "../assets/pawpicker-thumb.jpg";
 import CarrotCrossroadsThumb from "../assets/carrot-crossroads-thumb.jpg";
@@ -28,15 +27,26 @@ function LinkContainer() {
 
   return (
     <div className="link-container-main">
-      {links.map((link) => (
-        <LinkContainerCard
-          key={link.title}
-          title={link.title}
-          imageUrl={link.img}
-          description={link.desc}
-          url={link.url}
-        />
-      ))}
+      <div className="link-container-title">
+        <h2>Our rabbits recent projects:</h2>
+      </div>
+      <div>
+        <p>
+          Our rabbit have been working on some projects recently. You can check
+          them out by clicking on the images below.
+        </p>
+      </div>
+      <div className="thumbnail-cards-container">
+        {links.map((link) => (
+          <LinkContainerCard
+            key={link.title}
+            title={link.title}
+            imageUrl={link.img}
+            description={link.desc}
+            url={link.url}
+          />
+        ))}
+      </div>
     </div>
   );
 }

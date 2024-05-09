@@ -1,5 +1,3 @@
-import "./LinkContainerCard.css";
-
 function LinkContainerCard({ title, imageUrl, description, url }) {
   return (
     <div

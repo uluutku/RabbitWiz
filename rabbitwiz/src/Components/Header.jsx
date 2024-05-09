@@ -1,6 +1,5 @@
-import React from "react";
 import "./Header.css";
-import LogoImage from "../assets/newicon.png";
+import LogoImage from "../assets/icon-gpt4.png";
 import { Link } from "react-router-dom";
 
 function Header() {

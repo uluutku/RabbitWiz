@@ -1,20 +1,28 @@
 import LinkContainerCard from "./LinkContainerCard";
 import "./LinkContainer.css";
-import RabbitWizThumb from "../assets/rabbit-wiz-thumb.jpg";
+import RabbitFlixThumb from "../assets/rabbitflix-new-thumb.jpg";
+import PawPickerThumb from "../assets/pawpicker-thumb.jpg";
+import CarrotCrossroadsThumb from "../assets/carrot-crossroads-thumb.jpg";
 
 function LinkContainer() {
   const links = [
     {
       title: "RabbitFlix",
       url: "http://rabbitflix.vercel.app",
-      img: RabbitWizThumb,
+      img: RabbitFlixThumb,
       desc: "A Netflix inspired project with our wizard rabbit's touch.",
     },
     {
+      title: "Carrot Crossroads",
+      url: "http://carrot-crossroads.vercel.app",
+      img: CarrotCrossroadsThumb,
+      desc: "Desicion based life simulation game with our rabbit touch.",
+    },
+    {
       title: "PawPicker",
-      url: "http://rabbitflix.vercel.app",
-      img: RabbitWizThumb,
-      desc: "A Netflix inspired project with our wizard rabbit's touch.",
+      url: "http://pawpicker.vercel.app",
+      img: PawPickerThumb,
+      desc: "Modern A/B testing tool for selecting perfect one from multiple images.",
     },
   ];
 

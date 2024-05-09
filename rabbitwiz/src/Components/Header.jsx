@@ -1,5 +1,5 @@
 import "./Header.css";
-import LogoImage from "../assets/icon-gpt4.png";
+import LogoImage from "../assets/rabbitwiz-logo-v2.png";
 import { Link } from "react-router-dom";
 
 function Header() {

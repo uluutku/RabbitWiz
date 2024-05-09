@@ -8,7 +8,13 @@ function LinkContainer() {
       title: "RabbitFlix",
       url: "http://rabbitflix.vercel.app",
       img: RabbitWizThumb,
-      desc: "Stream your favorite shows with a magical twist!",
+      desc: "A Netflix inspired project with our wizard rabbit's touch.",
+    },
+    {
+      title: "PawPicker",
+      url: "http://rabbitflix.vercel.app",
+      img: RabbitWizThumb,
+      desc: "A Netflix inspired project with our wizard rabbit's touch.",
     },
   ];
 

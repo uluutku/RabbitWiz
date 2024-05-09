@@ -2,13 +2,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   height: 30vh;
-  background-color: #f8f8f8;
+  background-color: #fdfdfd;
   color: #333;
-  font-size: 2rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  font-size: 1rem;
   position: relative;
   z-index: 1;
 }
@@ -21,40 +19,22 @@
   flex-wrap: wrap;
 }
 
-/* Animation */
-@keyframes bounce {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-}
-
-/* Apply animation to first card */
-.box-cards-container > :first-child {
-  animation: bounce 1s infinite;
-}
-
 @media (max-width: 768px) {
-  /* Adjustments for tablets and smaller devices */
   .link-container-main {
-    height: auto; /* Remove fixed height */
-    padding: 20px; /* Add padding for smaller devices */
-    font-size: 1.5rem; /* Adjust font size for smaller devices */
+    height: auto;
+    padding: 20px;
+    font-size: 1.5rem;
   }
 
   .box-cards-container {
-    flex-direction: column; /* Stack cards vertically on smaller devices */
-    gap: 10px; /* Add gap between cards */
+    flex-direction: column;
+    gap: 10px;
   }
 }
 
 @media (max-width: 576px) {
-  /* Adjustments for mobile devices */
   .link-container-main {
-    padding: 10px; /* Further adjust padding for smaller devices */
-    font-size: 1.2rem; /* Further adjust font size for smaller devices */
+    padding: 10px;
+    font-size: 1.2rem;
   }
 }

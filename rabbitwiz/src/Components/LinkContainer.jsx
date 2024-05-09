@@ -3,7 +3,6 @@ import "./LinkContainer.css";
 import RabbitWizThumb from "../assets/rabbit-wiz-thumb.jpg";
 
 function LinkContainer() {
-  // Sample data, replace or fetch as required
   const links = [
     {
       title: "RabbitFlix",
@@ -11,7 +10,6 @@ function LinkContainer() {
       img: RabbitWizThumb,
       desc: "Stream your favorite shows with a magical twist!",
     },
-    // Add more link objects here
   ];
 
   return (

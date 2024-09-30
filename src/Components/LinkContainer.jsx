@@ -26,13 +26,13 @@ function LinkContainer() {
   ];
 
   return (
-    <div className="link-container-main">
+    <div className="link-container">
       <div className="link-container-title">
-        <h2>Our rabbits recent projects:</h2>
+        <h2>Our rabbits' recent projects:</h2>
       </div>
-      <div>
+      <div className="link-container-description">
         <p>
-          Our rabbit have been working on some projects recently. You can check
+          Our rabbit has been working on some projects recently. You can check
           them out by clicking on the images below.
         </p>
       </div>

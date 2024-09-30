@@ -1,63 +1,89 @@
+/* Global Styles */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Consistent font throughout */
   color: #333;
   margin: 0;
   padding: 0;
+  line-height: 1.6; /* Improve readability */
 }
+
+/* Link Container Main Section */
 .link-container-main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 50svh;
+  min-height: 60vh; /* Adjust height for better flexibility on different screens */
   background-color: #fdfdfd;
+  padding: 20px;
   margin-bottom: 5vh;
 }
 
+/* Link Container Title */
 .link-container-title {
   margin-bottom: 10px;
   text-align: center;
 }
-.link-container-main p {
-  text-align: center;
-  font-size: 1.1rem;
-  max-width: 100%;
-  line-height: 1.5;
-}
-.thumbnail-cards-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
+
+.link-container-title h2 {
+  font-size: 2rem;
+  margin: 0;
 }
 
+.link-container-main p {
+  text-align: center;
+  font-size: 1.2rem;
+  max-width: 800px; /* Set a maximum width for readability */
+  line-height: 1.5;
+  margin: 0 auto;
+}
+
+/* Thumbnail Cards Container */
+.thumbnail-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid layout */
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px; /* Limit the width of the content */
+  padding: 10px;
+  margin: 20px 0;
+}
+
+/* Link Container Card */
 .link-container-card {
-  min-width: 300px;
-  min-height: 200px;
-  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
   position: relative;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff; /* Provide fallback for background image */
 }
 
+.link-container-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Background */
 .card-background {
   width: 100%;
   height: 100%;
   background-size: cover;
   background-position: center;
   display: flex;
-  align-items: center;
+  align-items: flex-end; /* Adjust for better alignment of content */
   justify-content: center;
 }
 
+/* Card Content */
 .card-content {
   font-size: 1.4rem;
   line-height: 1.5;
   width: 100%;
-  height: auto;
   background: rgba(0, 0, 0, 0.5);
   color: white;
   padding: 20px;
@@ -73,51 +99,52 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.link-container-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-}
+/* Media Queries for Responsiveness */
 
-/* Responsive Adjustments */
+/* Medium Devices (Tablets) */
 @media (max-width: 768px) {
   .link-container-main {
-    height: 100svh;
-    margin-bottom: 5vh;
+    height: auto; /* Allow content to dictate the height */
+    padding: 20px;
   }
 
   .thumbnail-cards-container {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Adjust grid for smaller devices */
   }
 
   .link-container-card {
-    width: 250px;
-    height: auto;
+    min-height: 200px; /* Ensure consistent height for cards */
   }
 
   .card-content {
-    padding: 15px;
     font-size: 1.2rem;
+    padding: 15px;
   }
 }
 
+/* Small Devices (Mobile) */
 @media (max-width: 576px) {
   .link-container-main {
     padding: 10px;
   }
 
   .link-container-title h2 {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Adjust font size */
   }
 
   .link-container-main p {
     font-size: 1rem;
   }
 
+  .thumbnail-cards-container {
+    grid-template-columns: 1fr; /* Single column layout on small screens */
+  }
+
   .link-container-card {
     width: 100%;
     margin: 10px 0;
     border-radius: 8px;
+    min-height: 180px;
   }
 
   .card-content {

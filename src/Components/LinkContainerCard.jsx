@@ -2,7 +2,12 @@ function LinkContainerCard({ title, imageUrl, description, url }) {
   return (
     <div
       className="link-container-card"
+      role="button"
+      tabIndex="0"
       onClick={() => window.open(url, "_blank")}
+      onKeyPress={(e) => {
+        if (e.key === 'Enter') window.open(url, "_blank");
+      }}
     >
       <div
         className="card-background"

@@ -1,7 +1,9 @@
+import React from 'react';
 import LinkContainerCard from "./LinkContainerCard";
 import RabbitFlixThumb from "../assets/rabbitflix-new-thumb.jpg";
 import PawPickerThumb from "../assets/pawpicker-thumb.jpg";
 import CarrotCrossroadsThumb from "../assets/carrot-crossroads-thumb.jpg";
+import "./LinkContainer.css";
 
 function LinkContainer() {
   const links = [
@@ -27,16 +29,13 @@ function LinkContainer() {
 
   return (
     <div className="link-container">
-      <div className="link-container-title">
-        <h2>Our rabbits' recent projects:</h2>
-      </div>
-      <div className="link-container-description">
+      <div className="link-container-header">
+        <h2>Our Rabbit's Recent Projects</h2>
         <p>
-          Our rabbit has been working on some projects recently. You can check
-          them out by clicking on the images below.
+          Our rabbit has been working on some exciting projects. You can check them out by clicking on the images below.
         </p>
       </div>
-      <div className="thumbnail-cards-container">
+      <div className="cards-wrapper">
         {links.map((link) => (
           <LinkContainerCard
             key={link.title}

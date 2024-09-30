@@ -6,54 +6,68 @@ import CarrotCrossroadsThumb from "../assets/carrot-crossroads-thumb.jpg";
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-const LinkContainerWrapper = styled.div`
+const LinkContainerWrapper = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
-  background-color: #fdfdfd;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.25); /* Glassmorphism effect */
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  width: 90vw;
+  max-width: 1000px;
+  margin: 0 auto;
 `;
 
 const LinkContainerHeader = styled.div`
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 
   h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 0.5rem;
   }
 
   p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     max-width: 800px;
+    opacity: 0.8;
   }
 
   @media (max-width: 768px) {
     h2 {
-      font-size: 1.8rem;
-    }
-
-    p {
-      font-size: 1rem;
-    }
-  }
-
-  @media (max-width: 576px) {
-    h2 {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
     }
 
     p {
       font-size: 0.9rem;
     }
   }
+
+  @media (max-width: 576px) {
+    h2 {
+      font-size: 1.4rem;
+    }
+
+    p {
+      font-size: 0.8rem;
+    }
+  }
 `;
 
 const CardsWrapper = styled(motion.div)`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr; /* Single column layout on small screens */
   gap: 20px;
   width: 100%;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr); /* Three columns on large screens */
+  }
 `;
 
 function LinkContainer() {
@@ -68,23 +82,25 @@ function LinkContainer() {
       title: "Carrot Crossroads",
       url: "http://carrot-crossroads.vercel.app",
       img: CarrotCrossroadsThumb,
-      desc: "Desicion based life simulation game with our rabbit touch.",
+      desc: "Decision-based life simulation game with a rabbit twist.",
     },
     {
       title: "PawPicker",
       url: "http://pawpicker.vercel.app",
       img: PawPickerThumb,
-      desc: "Modern A/B testing tool for selecting perfect one from multiple images.",
+      desc: "Modern A/B testing tool for selecting the best from multiple images.",
     },
   ];
 
   return (
-    <LinkContainerWrapper>
+    <LinkContainerWrapper
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
       <LinkContainerHeader>
         <h2>Our Rabbit's Recent Projects</h2>
-        <p>
-          Our rabbit has been working on some exciting projects. You can check them out by clicking on the images below.
-        </p>
+        <p>Discover the magical projects our wizard rabbit has been crafting. Click to explore!</p>
       </LinkContainerHeader>
       <CardsWrapper
         initial={{ opacity: 0 }}

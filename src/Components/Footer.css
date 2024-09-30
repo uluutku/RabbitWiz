@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&family=Shadows+Into+Light&display=swap");
 
-/* Footer Container */
 .footer-container {
   background-color: #222;
   color: #fff;
@@ -10,39 +9,19 @@
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  font-family: "Rowdies", sans-serif;
+  font-family: Rowdies, sans-serif;
   font-weight: 100;
-  flex-wrap: wrap; /* Allow wrapping for responsiveness */
-}
-
-/* Navigation Links */
-.nav-links {
-  display: flex;
-  gap: 20px;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #fff;
+  margin: 0 10px;
   transition: color 0.3s ease;
-  font-size: 1rem;
 }
 
 .nav-links a:hover {
   color: #55a7ff;
-}
-
-/* Copyright Text */
-.copyright-text {
-  font-size: 0.9rem;
-  margin: 10px 0;
-  text-align: center;
-}
-
-.copyright-text a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.2rem;
 }
 
 .social-media-container {
@@ -50,24 +29,23 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  margin-top: 20px;
 }
 
 .social-media-container h4 {
-  margin: 10px 0;
-  font-size: 1.2rem;
+  margin: 0 0 10px 0;
 }
 
 .social-media-icons {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
 }
 
 .social-media-icons a {
   color: #fff;
   transition: transform 0.3s ease, color 0.3s ease;
+  margin: 0px 20px;
 }
 
 .social-media-icons a:hover {
@@ -75,59 +53,27 @@
   transform: scale(1.4);
 }
 
-/* Mobile Responsiveness */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   .footer-container {
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .social-media-container {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 15px;
-  }
-
-  .nav-links {
     justify-content: center;
-    gap: 15px;
-    margin-bottom: 20px;
-  }
-
-  .copyright-text {
-    margin-bottom: 20px;
-    font-size: 0.8rem;
-  }
-
-  .social-media-icons a {
-    margin: 0 15px;
-  }
-
-  .social-media-container h4 {
-    font-size: 1rem;
-  }
-}
-
-@media only screen and (max-width: 576px) {
-  .footer-container {
-    padding: 10px;
-    text-align: center;
+    margin-top: 20px;
   }
 
   .nav-links {
-    flex-direction: column;
-    gap: 10px;
+    margin-top: 20px;
     margin-bottom: 20px;
   }
 
-  .social-media-icons {
-    gap: 15px;
-  }
-
   .social-media-icons a {
-    margin: 0 10px;
-  }
-
-  .social-media-container h4 {
-    font-size: 0.9rem;
-  }
-
-  .copyright-text {
-    font-size: 0.75rem;
+    margin: 0 20px;
   }
 }

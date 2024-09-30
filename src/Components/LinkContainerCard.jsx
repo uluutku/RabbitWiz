@@ -3,14 +3,13 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-// Styled-components for better scoping and modularity
 const CardWrapper = styled(motion.div)`
-  border-radius: 10px;
+  border-radius: 15px;
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
   position: relative;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1), -3px -3px 6px rgba(255, 255, 255, 0.7); /* Neomorphic effect */
 
   &:hover {
     transform: translateY(-10px);
@@ -23,7 +22,6 @@ const CardImage = styled.div`
   padding-top: 56.25%; /* 16:9 Aspect Ratio */
   background-size: cover;
   background-position: center;
-  position: relative;
 `;
 
 const CardOverlay = styled.div`
@@ -32,7 +30,7 @@ const CardOverlay = styled.div`
   width: 100%;
   background: rgba(0, 0, 0, 0.6);
   color: #fff;
-  padding: 20px;
+  padding: 10px;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 
@@ -42,22 +40,21 @@ const CardOverlay = styled.div`
 
   h3 {
     margin: 0;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   p {
-    margin: 10px 0 0;
-    font-size: 1rem;
-    line-height: 1.4;
+    margin: 8px 0 0;
+    font-size: 0.9rem;
   }
 
   @media (max-width: 768px) {
     h3 {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
 
     p {
-      font-size: 0.9rem;
+      font-size: 0.85rem;
     }
   }
 
@@ -77,9 +74,9 @@ function LinkContainerCard({ title, imageUrl, description, url }) {
     <CardWrapper
       onClick={() => window.open(url, "_blank")}
       initial={{ opacity: 0, y: 20 }}
-      whileHover={{ scale: 1.05 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
+      whileHover={{ scale: 1.05 }}
     >
       <CardImage style={{ backgroundImage: `url(${imageUrl})` }} />
       <CardOverlay>

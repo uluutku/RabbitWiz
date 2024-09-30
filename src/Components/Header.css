@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&family=Shadows+Into+Light&display=swap");
 
-/* Header Container */
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -14,10 +13,55 @@
   right: 0;
   z-index: 1;
   font-family: "Rowdies", sans-serif;
-  height: 60px;
 }
 
-/* Logo Container */
+.header-container nav {
+  display: flex;
+  gap: 20px;
+  margin-right: 70px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.header-container nav a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  margin-right: 20px;
+}
+
+.header-container nav a:hover {
+  color: #337790;
+}
+
+@media (max-width: 576px) {
+  .header-container nav {
+    flex-direction: row;
+    gap: 10px;
+    margin-right: 0;
+  }
+}
+
+.header-container nav a {
+  color: #333;
+  text-decoration: none;
+}
+
+@media (max-width: 576px) {
+  .header-container {
+    padding: 0 10px;
+  }
+
+  .header-container h1 {
+    font-size: 1.2rem;
+  }
+
+  .header-container nav {
+    flex-direction: row;
+    gap: 10px;
+  }
+}
+
 .logo-container {
   display: flex;
   align-items: center;
@@ -30,67 +74,7 @@
 }
 
 .header-title {
-  font-size: 1.8rem;
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 600;
   color: #337790;
-  margin: 0;
-}
-
-/* Header Links */
-.header-links {
-  display: flex;
-  gap: 20px;
-  font-size: 1rem;
-}
-
-.header-links a {
-  color: #333;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.header-links a:hover {
-  color: #337790;
-}
-
-/* Mobile Navigation - Adjustments for Smaller Screens */
-@media (max-width: 768px) {
-  .header-container {
-    padding: 0 15px;
-    height: 55px;
-  }
-
-  .header-title {
-    font-size: 1.6rem;
-  }
-
-  .header-links {
-    gap: 15px;
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .header-container {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px 20px;
-    height: auto;
-  }
-
-  .logo-container {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .header-title {
-    font-size: 1.4rem;
-  }
-
-  .header-links {
-    width: 100%;
-    justify-content: flex-end;
-    font-size: 0.9rem;
-    gap: 10px;
-  }
 }

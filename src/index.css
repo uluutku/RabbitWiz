@@ -1,66 +1,56 @@
-/* Global Styles */
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Consistent font throughout */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
   margin: 0;
   padding: 0;
-  line-height: 1.6; /* Improve readability */
 }
 
-/* Link Container Main Section */
+/* Container Styles */
 .link-container-main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 60vh; /* Adjust height for better flexibility on different screens */
+  padding: 5vh 2vw;
   background-color: #fdfdfd;
-  padding: 20px;
   margin-bottom: 5vh;
-}
-
-/* Link Container Title */
-.link-container-title {
-  margin-bottom: 10px;
   text-align: center;
 }
 
+.link-container-title {
+  margin-bottom: 20px;
+}
 .link-container-title h2 {
   font-size: 2rem;
-  margin: 0;
 }
 
-.link-container-main p {
-  text-align: center;
-  font-size: 1.2rem;
-  max-width: 800px; /* Set a maximum width for readability */
+.link-container-description p {
+  font-size: 1.1rem;
+  max-width: 800px;
   line-height: 1.5;
   margin: 0 auto;
 }
 
-/* Thumbnail Cards Container */
+/* Thumbnail Card Container */
 .thumbnail-cards-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid layout */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 20px;
-  width: 100%;
-  max-width: 1200px; /* Limit the width of the content */
-  padding: 10px;
-  margin: 20px 0;
+  margin-top: 20px;
 }
 
-/* Link Container Card */
+/* Card Styles */
 .link-container-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  width: 300px;
+  height: 200px;
+  margin: 10px;
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
   position: relative;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #fff; /* Provide fallback for background image */
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .link-container-card:hover {
@@ -75,80 +65,85 @@ body {
   background-size: cover;
   background-position: center;
   display: flex;
-  align-items: flex-end; /* Adjust for better alignment of content */
+  align-items: flex-end;
   justify-content: center;
 }
 
 /* Card Content */
 .card-content {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   line-height: 1.5;
   width: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   color: white;
   padding: 20px;
   text-align: center;
-  position: absolute;
-  bottom: 0;
   opacity: 0;
-  transition: opacity 0.5s;
+  transition: opacity 0.5s, background-color 0.5s;
 }
 
 .link-container-card:hover .card-content {
   opacity: 1;
-  background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Media Queries for Responsiveness */
-
-/* Medium Devices (Tablets) */
-@media (max-width: 768px) {
-  .link-container-main {
-    height: auto; /* Allow content to dictate the height */
-    padding: 20px;
-  }
-
-  .thumbnail-cards-container {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Adjust grid for smaller devices */
-  }
-
-  .link-container-card {
-    min-height: 200px; /* Ensure consistent height for cards */
-  }
-
-  .card-content {
-    font-size: 1.2rem;
-    padding: 15px;
-  }
-}
-
-/* Small Devices (Mobile) */
-@media (max-width: 576px) {
-  .link-container-main {
-    padding: 10px;
-  }
-
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
   .link-container-title h2 {
-    font-size: 1.5rem; /* Adjust font size */
+    font-size: 1.8rem;
   }
 
-  .link-container-main p {
+  .link-container-description p {
     font-size: 1rem;
   }
 
+  .link-container-card {
+    width: 280px;
+    height: 180px;
+  }
+
+  .card-content {
+    padding: 15px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .link-container-main {
+    padding: 5vh 4vw;
+  }
+
   .thumbnail-cards-container {
-    grid-template-columns: 1fr; /* Single column layout on small screens */
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .link-container-card {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-content {
+    padding: 15px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .link-container-title h2 {
+    font-size: 1.6rem;
+  }
+
+  .link-container-description p {
+    font-size: 0.9rem;
   }
 
   .link-container-card {
     width: 100%;
     margin: 10px 0;
-    border-radius: 8px;
-    min-height: 180px;
   }
 
   .card-content {
-    font-size: 1rem;
+    font-size: 0.9rem;
     padding: 10px;
   }
 }

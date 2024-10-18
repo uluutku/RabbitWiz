@@ -1,8 +1,7 @@
-// header.jsx
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import rabbitWizardLogo from './rabbit-wizard-logo.png'; 
-import { FiMenu, FiX } from 'react-icons/fi'; 
+import rabbitWizardLogo from './rabbit-wizard-logo.png';
+import { FiMenu, FiX, FiSun, FiMoon } from 'react-icons/fi';
 import './Header.css';
 
 function Header() {
@@ -12,7 +11,6 @@ function Header() {
   // Function to toggle dark mode
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
-    // Update the body's class
     if (!darkMode) {
       document.body.classList.add('dark-mode');
       document.body.classList.remove('light-mode');
@@ -20,11 +18,6 @@ function Header() {
       document.body.classList.add('light-mode');
       document.body.classList.remove('dark-mode');
     }
-  };
-
-  // Function to toggle mobile menu
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
   };
 
   // Close mobile menu when resizing window
@@ -38,7 +31,7 @@ function Header() {
     return () => window.removeEventListener('resize', handleResize);
   }, [mobileMenuOpen]);
 
-  // Effect to set initial theme based on user preference
+  // Set initial theme based on user preference
   useEffect(() => {
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     setDarkMode(prefersDark);
@@ -54,49 +47,23 @@ function Header() {
   return (
     <header className="header">
       <div className="logo">
-        <Link to="/" onClick={() => setMobileMenuOpen(false)}>
+        <Link to="/">
           <img src={rabbitWizardLogo} alt="RabbitWiz Logo" className="logo-icon" />
           <span className="logo-text">RabbitWiz</span>
         </Link>
       </div>
-      <nav className={`nav-links ${mobileMenuOpen ? 'open active' : 'closed'}`}>
-        <Link to="/" className="nav-link" onClick={() => setMobileMenuOpen(false)}>
-          Home
-        </Link>
-        <Link to="/portfolio" className="nav-link" onClick={() => setMobileMenuOpen(false)}>
-          Portfolio
-        </Link>
-        <Link to="/about" className="nav-link" onClick={() => setMobileMenuOpen(false)}>
-          About
-        </Link>
-        {/* Additional links can be added here */}
-        <div className="mobile-theme-switcher">
-          <input
-            type="checkbox"
-            id="mobile-toggle"
-            className="toggle"
-            checked={darkMode}
-            onChange={toggleDarkMode}
-          />
-          <label htmlFor="mobile-toggle">
-            <span className="toggle-icon">{darkMode ? '🌞' : '🌜'}</span>
-          </label>
-        </div>
+      <nav className={`nav-links ${mobileMenuOpen ? 'open' : ''}`}>
+        <Link to="/" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Home</Link>
+        <Link to="/portfolio" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Portfolio</Link>
+        <Link to="/about" className="nav-link" onClick={() => setMobileMenuOpen(false)}>About</Link>
       </nav>
-      <div className="theme-switcher">
-        <input
-          type="checkbox"
-          id="toggle"
-          className="toggle"
-          checked={darkMode}
-          onChange={toggleDarkMode}
-        />
-        <label htmlFor="toggle">
-          <span className="toggle-icon">{darkMode ? '🌞' : '🌜'}</span>
-        </label>
+      <div className="theme-switcher" onClick={toggleDarkMode}>
+        <div className={`dark-mode-btn ${darkMode ? 'dark' : 'light'}`}>
+          {darkMode ? <FiMoon size={22} /> : <FiSun size={22} />}
+        </div>
       </div>
-      <div className="menu-icon" onClick={toggleMobileMenu}>
-        {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+      <div className="menu-icon" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+        {mobileMenuOpen ? <FiX size={30} /> : <FiMenu size={30} />}
       </div>
     </header>
   );

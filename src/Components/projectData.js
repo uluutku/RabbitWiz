@@ -1,7 +1,7 @@
 // projectData.js
 import RabbitFlixThumb from './rabbitflix-new-thumb.jpg';
 import PawPickerThumb from './pawpicker-thumb.jpg';
-import CarrotCrossroadsThumb from './carrot-crossroads-thumb.jpg';
+import CarrotCrossroadsThumb from './carrot-crossroads.png';
 import DicesNRabbitsThumb from './dicesnrtabbits.png';
 
 const projectData = [
@@ -30,7 +30,7 @@ const projectData = [
   {
     id: 2,
     title: 'RabbitFlix',
-    url: 'http://rabbitflix.vercel.app',
+    url: 'http://rabbitflix.rabbitwiz.com',
     img: RabbitFlixThumb,
     desc: "A Netflix inspired project with our wizard rabbit's touch.",
     technologies: ['React', 'Redux', 'Styled Components'],
@@ -43,7 +43,7 @@ const projectData = [
       'Implementing infinite scrolling',
       'Optimizing API requests',
     ],
-    github: 'https://github.com/yourprofile/rabbitflix',
+    github: 'https://github.com/uluutku/rabbitflix',
     screenshots: [
       './rabbitflix-new-thumb.jpg',
       './rabbitflix-new-thumb.jpg',
@@ -52,7 +52,7 @@ const projectData = [
   {
     id: 3,
     title: 'Carrot Crossroads',
-    url: 'http://carrot-crossroads.vercel.app',
+    url: 'http://carrotcrossroads.rabbitwiz.com',
     img: CarrotCrossroadsThumb,
     desc: 'Decision-based life simulation game with a rabbit twist.',
     technologies: ['Unity', 'C#', 'Illustrator'],
@@ -65,7 +65,7 @@ const projectData = [
       'Creating engaging narratives',
       'Optimizing game performance',
     ],
-    github: 'https://github.com/yourprofile/carrot-crossroads',
+    github: 'https://github.com/uluutku/carrot-crossroads',
     screenshots: [
       './rabbitflix-new-thumb.jpg',
       './rabbitflix-new-thumb.jpg',
@@ -74,7 +74,7 @@ const projectData = [
   {
     id: 4,
     title: 'PawPicker',
-    url: 'http://pawpicker.vercel.app',
+    url: 'http://pawpicker.rabbitwiz.com',
     img: PawPickerThumb,
     desc: 'Modern A/B testing tool for selecting the best from multiple images.',
     technologies: ['Vue.js', 'Firebase', 'CSS Grid'],
@@ -87,7 +87,7 @@ const projectData = [
       'Ensuring real-time updates',
       'Scalable database design',
     ],
-    github: 'https://github.com/yourprofile/pawpicker',
+    github: 'https://github.com/uluutku/pawpicker',
     screenshots: [
       './rabbitflix-new-thumb.jpg',
       './rabbitflix-new-thumb.jpg',

@@ -25,9 +25,6 @@ function Footer() {
           <Link to="/contact" className="footer-link">
             Contact
           </Link>
-          <a href="/sitemap.xml" className="footer-link">
-            Sitemap
-          </a>
         </div>
         <div className="footer-socials">
           <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer">

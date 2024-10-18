@@ -241,7 +241,6 @@ a,
   }
 }
 
-/* Fix for menu cutting off */
 .nav-links.open {
   overflow-y: auto;
 }

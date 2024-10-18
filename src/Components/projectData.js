@@ -2,10 +2,33 @@
 import RabbitFlixThumb from './rabbitflix-new-thumb.jpg';
 import PawPickerThumb from './pawpicker-thumb.jpg';
 import CarrotCrossroadsThumb from './carrot-crossroads-thumb.jpg';
+import DicesNRabbitsThumb from './dicesnrtabbits.png';
 
 const projectData = [
   {
     id: 1,
+    title: 'Dices&Rabbits',
+    url: 'http://dicesandrabbits.rabbitwiz.com',
+    img: DicesNRabbitsThumb,
+    desc: "A Dices&Fold game clone on browser using React.",
+    technologies: ['React', 'Redux', 'Styled Components'],
+    features: [
+      'Browse and search for movies',
+      'User authentication',
+      'Responsive design',
+    ],
+    challenges: [
+      'Implementing infinite scrolling',
+      'Optimizing API requests',
+    ],
+    github: 'https://github.com/uluutku/rabbitflix',
+    screenshots: [
+      './rabbitflix-new-thumb.jpg',
+      './rabbitflix-new-thumb.jpg',
+    ],
+  },
+  {
+    id: 2,
     title: 'RabbitFlix',
     url: 'http://rabbitflix.vercel.app',
     img: RabbitFlixThumb,
@@ -27,7 +50,7 @@ const projectData = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: 'Carrot Crossroads',
     url: 'http://carrot-crossroads.vercel.app',
     img: CarrotCrossroadsThumb,
@@ -49,7 +72,7 @@ const projectData = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: 'PawPicker',
     url: 'http://pawpicker.vercel.app',
     img: PawPickerThumb,

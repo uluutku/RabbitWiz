@@ -1,8 +1,8 @@
 // About.jsx
 import React from 'react';
-import './aboutPage.css';
 import profilePicture from './newicon.png'; // Ensure this image is available
 import { FaReact, FaNodeJs, FaDatabase, FaLaptopCode } from 'react-icons/fa';
+import './AboutPage.css';
 
 function AboutPage() {
   return (

@@ -1,7 +1,7 @@
 // hero.jsx
 import React from 'react';
-import './hero.css';
-import heroImage from './bg_rabbit.jpg'; // Ensure this image is available
+import heroImage from './bg_rabbit.jpg';
+import './Hero.css';
 
 function Hero() {
   return (

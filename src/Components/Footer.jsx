@@ -1,9 +1,9 @@
 // footer.jsx
 import React from 'react';
-import './footer.css';
 import { Link } from 'react-router-dom';
-import rabbitWizardLogo from './rabbit-wizard-logo.png'; // Ensure this image is available
+import rabbitWizardLogo from './rabbit-wizard-logo.png';
 import { FaTwitter, FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
+import './Footer.css';
 
 function Footer() {
   return (

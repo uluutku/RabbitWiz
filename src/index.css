@@ -1,8 +1,17 @@
-/* Global Styles */
+
+/* Global styles (e.g., in index.css or App.css) */
+:root {
+  --background-color: #0b0b0d;
+  --text-color: #ffffff;
+  --accent-color: #9b5de5;
+  --transition-duration: 0.3s;
+  --transition-easing: ease;
+}
+
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Consistent font throughout */
-  color: #333;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
-  padding: 0;
-  line-height: 1.6; /* Improve readability */
+  font-family: 'Montserrat', sans-serif;
 }

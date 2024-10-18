@@ -7,6 +7,7 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import AboutPage from "./Pages/AboutPage";
 import "./App.css";
+import PortfolioPage from "./Pages/PortfolioPage";
 
 // Create a QueryClient instance for react-query
 const queryClient = new QueryClient();
@@ -16,7 +17,7 @@ function App() {
   const routes = useRoutes([
     { path: "/", element: <LandingPage /> },
     { path: "/about", element: <AboutPage /> },
-    // Catch all routes, redirects to home
+    { path: "/portfolio", element: <PortfolioPage /> },
     { path: "*", element: <Navigate to="/" /> },
   ]);
 

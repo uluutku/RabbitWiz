@@ -1,13 +1,14 @@
 import React from "react";
 import "./LandingPage.css";
 import Hero from "../Components/Hero";
-import LinkContainer from "../Components/LinkContainer";
+import Projects from "../Components/Projects";
 
 function LandingPage() {
   return (
     <div>
       <Hero />
-      <LinkContainer />
+      <Projects />
+
     </div>
   );
 }

@@ -1,50 +1,53 @@
-import React from "react";
-import "./Footer.css";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import XIcon from "@mui/icons-material/X";
-import { Link } from "react-router-dom";
+// footer.jsx
+import React from 'react';
+import './footer.css';
+import { Link } from 'react-router-dom';
+import rabbitWizardLogo from './rabbit-wizard-logo.png'; // Ensure this image is available
+import { FaTwitter, FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 
 function Footer() {
   return (
-    <div className="footer-container">
-      <div className="nav-container">
-        <div className="nav-links">
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
+    <footer className="footer">
+      <div className="footer-container">
+        <div className="footer-logo">
+          <Link to="/">
+            <img src={rabbitWizardLogo} alt="RabbitWiz Logo" className="footer-logo-icon" />
+            <span className="footer-logo-text">RabbitWiz</span>
+          </Link>
         </div>
-      </div>
-      <div className="copyright-text">
-        <p>
-          &copy; 2024 RabbitWiz. Made with ❤️ by{" "}
-          <a
-            href="http://uxu.epizy.com/sites/iPortfolio/index.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            🪄
-          </a>
-        </p>
-      </div>
-      <div className="social-media-container">
-        <h4>Make sure chase the rabbit on:</h4>
-        <div className="social-media-icons">
-          <a
-            href="https://www.instagram.com/rabbitwizai/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <InstagramIcon />
-          </a>
-          <a
-            href="https://twitter.com/RabbitWizAi/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <XIcon />
+        <div className="footer-links">
+          <Link to="/about" className="footer-link">
+            About
+          </Link>
+          <Link to="/portfolio" className="footer-link">
+    Portfolio
+  </Link>
+          <Link to="/contact" className="footer-link">
+            Contact
+          </Link>
+          <a href="/sitemap.xml" className="footer-link">
+            Sitemap
           </a>
         </div>
+        <div className="footer-socials">
+          <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer">
+            <FaTwitter size={24} />
+          </a>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin size={24} />
+          </a>
+          <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer">
+            <FaGithub size={24} />
+          </a>
+          <a href="mailto:youremail@example.com">
+            <FaEnvelope size={24} />
+          </a>
+        </div>
+        <div className="footer-bottom">
+          <p>&copy; {new Date().getFullYear()} RabbitWiz. All rights reserved.</p>
+        </div>
       </div>
-    </div>
+    </footer>
   );
 }
 

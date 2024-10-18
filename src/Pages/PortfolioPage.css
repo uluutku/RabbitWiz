@@ -1,0 +1,61 @@
+/* PortfolioPage.css */
+
+.portfolio-page {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 80px 50px;
+    min-height: 100vh;
+  }
+  
+  .portfolio-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  .portfolio-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .portfolio-subtitle {
+    font-size: 1.2em;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .portfolio-page {
+      padding: 60px 30px;
+    }
+  
+    .portfolio-title {
+      font-size: 2em;
+    }
+  
+    .portfolio-subtitle {
+      font-size: 1em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .portfolio-page {
+      padding: 40px 20px;
+    }
+  
+    .portfolio-title {
+      font-size: 1.8em;
+    }
+  
+    .portfolio-subtitle {
+      font-size: 0.9em;
+    }
+  }
+  

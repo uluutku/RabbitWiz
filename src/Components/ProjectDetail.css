@@ -1,0 +1,124 @@
+/* ProjectDetail.css */
+
+.project-detail-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(11, 11, 13, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+  }
+  
+  .project-detail {
+    background: #1c1c1e;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 800px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  
+  .project-detail-content {
+    color: #ffffff;
+  }
+  
+  .project-detail-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+  }
+  
+  .project-detail-description {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .project-detail-images {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .project-detail-images img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .project-detail-section {
+    margin-bottom: 30px;
+  }
+  
+  .project-detail-section h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: var(--accent-color);
+  }
+  
+  .project-detail-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .project-detail-section ul li {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  .project-detail-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .project-detail-link {
+    display: flex;
+    align-items: center;
+    background-color: var(--accent-color);
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color var(--transition-duration) var(--transition-easing);
+  }
+  
+  .project-detail-link:hover {
+    background-color: #7a48b7;
+  }
+  
+  .project-detail-link svg {
+    margin-left: 10px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .project-detail {
+      padding: 20px;
+    }
+  
+    .project-detail-title {
+      font-size: 1.8em;
+    }
+  }
+  

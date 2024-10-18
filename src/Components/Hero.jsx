@@ -1,43 +1,26 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
-import CircularProgress from "@mui/material/CircularProgress";
-import "./Hero.css";
-import heroImage from "../assets/single_rabbit_v4.png";
+// hero.jsx
+import React from 'react';
+import './hero.css';
+import heroImage from './bg_rabbit.jpg'; // Ensure this image is available
 
 function Hero() {
-  const [loading, setLoading] = useState(true);
-
-  const handleImageLoad = () => {
-    setLoading(false);
-  };
-
   return (
-    <motion.div 
-      className="hero-main"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.8 }}
-    >
-      <motion.div 
-        className="hero-container"
-        initial={{ scale: 1 }}
-        whileHover={{ scale: 1.02 }}
-        transition={{ type: "spring", stiffness: 200 }}
-      >
-        <div className="hero-image-container">
-          {loading && <CircularProgress />}
-          <motion.img
-            src={heroImage}
-            alt="Hero Rabbit"
-            className={`hero-image ${loading ? "hidden" : ""}`}
-            onLoad={handleImageLoad}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: loading ? 0 : 1 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-          />
-        </div>
-      </motion.div>
-    </motion.div>
+    <section className="hero">
+      <div className="hero-content">
+        <h1 className="hero-title">
+          Unleash the Magic with <span>RabbitWiz</span>
+        </h1>
+        <p className="hero-subtitle">
+          Discover the wizardry of modern web development through captivating experiences.
+        </p>
+        <a href="#portfolio" className="hero-button">
+          Explore Portfolio
+        </a>
+      </div>
+      <div className="hero-image-container">
+        <img src={heroImage} alt="Rabbit Wizard" className="hero-image" />
+      </div>
+    </section>
   );
 }
 

@@ -1,9 +1,9 @@
 // header.jsx
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './header.css';
-import rabbitWizardLogo from './rabbit-wizard-logo.png'; // Ensure this PNG asset is available
-import { FiMenu, FiX } from 'react-icons/fi'; // Menu icons
+import rabbitWizardLogo from './rabbit-wizard-logo.png'; 
+import { FiMenu, FiX } from 'react-icons/fi'; 
+import './Header.css';
 
 function Header() {
   const [darkMode, setDarkMode] = useState(false);

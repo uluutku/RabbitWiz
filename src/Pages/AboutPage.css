@@ -1,17 +1,30 @@
-/* About.css */
-
 :root {
-  --background-color: #0b0b0d;
-  --text-color: #ffffff;
-  --accent-color: #9b5de5;
-  --secondary-text-color: rgba(255, 255, 255, 0.8);
+  /* Dark Mode Variables */
+  --about-background: var(--background-color);
+  --about-text-color: var(--text-color);
+  --about-accent-color: var(--accent-color);
+  --about-secondary-text-color: var(--secondary-text-color);
+  --about-section-bg: rgba(255, 255, 255, 0.01);
+  --about-skill-bg: rgba(255, 255, 255, 0.1);
+  --about-button-hover-bg: #7a48b7;
   --transition-duration: 0.3s;
   --transition-easing: ease;
 }
 
+/* Light Mode Variables */
+body.light-mode {
+  --about-background: #fefefe;
+  --about-text-color: #333333;
+  --about-accent-color: #007acc;
+  --about-secondary-text-color: rgba(0, 0, 0, 0.7);
+  --about-section-bg: rgba(0, 0, 0, 0.05);
+  --about-skill-bg: rgba(0, 0, 0, 0.1);
+  --about-button-hover-bg: #005a99;
+}
+
 .about {
-  background-color: var(--background-color);
-  color: var(--text-color);
+  background-color: var(--about-background);
+  color: var(--about-text-color);
   padding: 80px 50px;
 }
 
@@ -21,32 +34,31 @@
 }
 
 .about-section:nth-child(odd) {
-  background: rgba(255, 255, 255, 0.01);
+  background: var(--about-section-bg);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px); 
-  border-radius: 15px; 
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 15px;
   padding: 80px 50px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.01);
 }
 
-
 .about-title {
   font-size: 2.5em;
   margin-bottom: 20px;
-  color: var(--accent-color);
+  color: var(--about-accent-color);
   text-align: center;
 }
 
 .about-description {
   font-size: 1.2em;
   margin-bottom: 20px;
-  color: var(--secondary-text-color);
+  color: var(--about-secondary-text-color);
   line-height: 1.6;
   text-align: center;
 }
 
 .about-description span {
-  color: var(--accent-color);
+  color: var(--about-accent-color);
 }
 
 .about-content {
@@ -67,7 +79,7 @@
   height: 300px;
   border-radius: 50%;
   object-fit: cover;
-  border: 5px solid var(--accent-color);
+  border: 5px solid var(--about-accent-color);
   transition: transform var(--transition-duration) var(--transition-easing);
 }
 
@@ -87,7 +99,7 @@
 .skills-title {
   font-size: 1.8em;
   margin-bottom: 15px;
-  color: var(--accent-color);
+  color: var(--about-accent-color);
 }
 
 .skills-list {
@@ -98,7 +110,7 @@
 }
 
 .skills-list li {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--about-skill-bg);
   padding: 10px 15px;
   margin: 5px;
   border-radius: 5px;
@@ -111,7 +123,7 @@
 .about-button {
   display: inline-block;
   padding: 15px 30px;
-  background-color: var(--accent-color);
+  background-color: var(--about-accent-color);
   color: #ffffff;
   text-decoration: none;
   font-size: 1em;
@@ -120,7 +132,7 @@
 }
 
 .about-button:hover {
-  background-color: #7a48b7;
+  background-color: var(--about-button-hover-bg);
 }
 
 /* Responsive Design */
@@ -176,4 +188,3 @@
     font-size: 1.3em;
   }
 }
-

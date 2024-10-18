@@ -1,13 +1,32 @@
-/* hero.css */
+/* Import modern fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 :root {
+  /* Dark Mode Colors */
   --hero-background: linear-gradient(135deg, #0b0b0d 0%, #1c1c1e 100%);
   --hero-text-color: #ffffff;
   --hero-accent-color: #9b5de5;
   --hero-button-bg: #9b5de5;
   --hero-button-text: #ffffff;
+  --hero-button-hover-bg: #7a48b7;
+  --hero-image-bg: rgba(255, 255, 255, 0.1);
+  --hero-image-shadow: rgba(0, 0, 0, 0.1);
+  --hero-highlight: rgba(255, 255, 255, 0.8);
   --transition-duration: 0.5s;
   --transition-easing: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Light Mode Variables */
+body.light-mode {
+  --hero-background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+  --hero-text-color: #333333;
+  --hero-accent-color: #007acc;
+  --hero-button-bg: #007acc;
+  --hero-button-text: #ffffff;
+  --hero-button-hover-bg: #005a99;
+  --hero-image-bg: rgba(0, 0, 0, 0.05);
+  --hero-image-shadow: rgba(0, 0, 0, 0.1);
+  --hero-highlight: rgba(0, 0, 0, 0.7);
 }
 
 .hero {
@@ -19,6 +38,7 @@
   padding: 100px 50px;
   color: var(--hero-text-color);
   overflow: hidden;
+  transition: background var(--transition-duration) var(--transition-easing);
 }
 
 .hero-content {
@@ -40,7 +60,7 @@
 .hero-subtitle {
   font-size: 1.2em;
   margin: 20px 0 40px 0;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--hero-highlight);
 }
 
 .hero-button {
@@ -57,7 +77,7 @@
 }
 
 .hero-button:hover {
-  background-color: #7a48b7;
+  background-color: var(--hero-button-hover-bg);
   transform: translateY(-5px);
 }
 
@@ -74,10 +94,11 @@
   animation: floatImage 6s ease-in-out infinite;
   border-radius: 36px;
   backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  background: var(--hero-image-bg);
+  box-shadow: 0 4px 30px var(--hero-image-shadow);
   position: relative;
   overflow: hidden;
+  transition: background var(--transition-duration) var(--transition-easing);
 }
 
 .hero-image::before {

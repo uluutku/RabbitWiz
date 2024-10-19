@@ -2,6 +2,7 @@
 import React from 'react';
 import heroImage from './bgv3.png';
 import './Hero.css';
+import { Link } from 'react-router-dom';
 
 function Hero() {
   return (
@@ -13,9 +14,9 @@ function Hero() {
         <p className="hero-subtitle">
           Discover the wizardry of modern web development through captivating experiences.
         </p>
-        <a href="#portfolio" className="hero-button">
+        <Link to="/portfolio" className="hero-button">
           Explore Portfolio
-        </a>
+        </Link>
       </div>
       <div className="hero-image-container">
         <img src={heroImage} alt="Rabbit Wizard" className="hero-image" />

@@ -42,6 +42,7 @@ body.light-mode {
 }
 
 .hero-content {
+  margin-left: 5vw;
   max-width: 600px;
 }
 
@@ -159,6 +160,14 @@ body.light-mode {
     padding: 12px 25px;
     font-size: 0.9em;
   }
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-image-container {
+    margin-top: 10vh;
+    width: 100vw;
+  }
 }
 
 @media (max-width: 480px) {
@@ -168,5 +177,14 @@ body.light-mode {
 
   .hero-subtitle {
     font-size: 0.9em;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-image-container {
+    margin-top: 10vh;
+    width: 100vw;
   }
 }

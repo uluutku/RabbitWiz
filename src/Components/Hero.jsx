@@ -1,6 +1,6 @@
 // hero.jsx
 import React from 'react';
-import heroImage from './bg_rabbit.png';
+import heroImage from './bgv3.png';
 import './Hero.css';
 
 function Hero() {

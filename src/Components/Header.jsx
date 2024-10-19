@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import rabbitWizardLogo from './rabbit-wizard-logo.png';
+import rabbitWizardLogo from './newicon.png';
 import { FiMenu, FiX, FiSun, FiMoon } from 'react-icons/fi';
 import './Header.css';
 

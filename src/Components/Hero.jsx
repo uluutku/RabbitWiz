@@ -7,7 +7,9 @@ import heroImage from "./bgv3.png";
 import SparkleBackground from "./SparkleBackground";
 
 function Hero() {
+  // Parallax offset
   const { scrollY } = useViewportScroll();
+  // Image moves slightly up to -50px as you scroll 0-300px
   const y = useTransform(scrollY, [0, 300], [0, -50]);
 
   return (
@@ -15,16 +17,25 @@ function Hero() {
       <SparkleBackground />
       <div className="hero-content">
         <h1 className="hero-title">
-          Summoning Modern Web Experiences <br />
-          <span>with RabbitWiz</span>
+          Where Code Meets Conjuring <br />
+          <span>RabbitWiz</span>
         </h1>
         <p className="hero-subtitle">
-          I’m a front-end developer weaving spells of design, code, and brand consistency—because every website deserves a touch of magic.
+          A front-end wizard weaving modern sites, wrapped in a whimsical but
+          consistent brand identity—proving that magic and professionalism
+          can coexist.
         </p>
-        <Link to="/portfolio" className="hero-button">
-          Open the Spellbook
-        </Link>
+        <div className="hero-buttons">
+          <Link to="/portfolio" className="hero-button">
+            Explore the Spellbook
+          </Link>
+          <Link to="/the-rabbit-way" className="hero-button secondary-button">
+            The Rabbit Way
+          </Link>
+        </div>
       </div>
+
+      {/* Parallax effect on the hero image container */}
       <motion.div className="hero-image-container" style={{ y }}>
         <img src={heroImage} alt="Rabbit Wizard" className="hero-image" />
       </motion.div>

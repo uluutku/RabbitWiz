@@ -1,0 +1,280 @@
+.sorcerers-sandbox {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.sandbox-intro {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sandbox-intro h1 {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  margin-bottom: 1.5rem;
+}
+
+.sandbox-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 1rem;
+  color: var(--text-color);
+}
+
+.sandbox-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  opacity: 0.8;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.tabs-container {
+  background: var(--background-color);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+.tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 1rem;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.2rem;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.tab svg {
+  font-size: 1.2rem;
+}
+
+.tab:hover {
+  background: var(--button-hover-background);
+}
+
+.tab.active {
+  background: var(--accent-color);
+  color: white;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+.project-card {
+  background: var(--button-background);
+  border-radius: 10px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px var(--shadow-color);
+}
+
+.project-card h3 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.project-card p {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.project-status {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.status-in-progress { color: #2ecc71; }
+.status-early-development { color: #3498db; }
+.status-research-phase { color: #f1c40f; }
+.status-planning { color: #e67e22; }
+.status-concept { color: #9b59b6; }
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  background: var(--button-hover-background);
+  color: var(--text-color);
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.85rem;
+}
+
+/* Active Development Animation */
+.project-card[data-status="active-development"] {
+  position: relative;
+}
+
+.project-card[data-status="active-development"]::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  padding: 2px;
+  background: linear-gradient(
+    45deg,
+    var(--accent-color),
+    #ff6b6b,
+    var(--accent-color)
+  );
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask: 
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+  animation: border-animation 3s linear infinite;
+}
+
+@keyframes border-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 130% 50%;
+  }
+}
+
+.github-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--button-background);
+  color: var(--text-color);
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.github-link:hover {
+  background: var(--button-hover-background);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .sorcerers-sandbox {
+    padding: 1rem;
+  }
+
+  .sandbox-intro {
+    margin-bottom: 2rem;
+  }
+
+  .sandbox-intro h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .sandbox-description {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .sandbox-subtitle {
+    font-size: 0.95rem;
+    padding: 0 1rem;
+  }
+
+  .tabs-container {
+    padding: 1rem;
+    margin: 0 -1rem;  /* Full width on mobile */
+    border-radius: 0;
+  }
+
+  .tabs {
+    flex-direction: row;  /* Keep horizontal but make scrollable */
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;  /* Hide scrollbar Firefox */
+  }
+
+  .tabs::-webkit-scrollbar {
+    display: none;  /* Hide scrollbar Chrome/Safari */
+  }
+
+  .tab {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    white-space: nowrap;  /* Prevent text wrapping */
+    flex-shrink: 0;  /* Prevent tab shrinking */
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0.5rem;
+  }
+
+  .project-card {
+    margin: 0;
+  }
+
+  .project-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .project-card p {
+    font-size: 0.95rem;
+  }
+
+  .tech-stack {
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .tech-tag {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.6rem;
+  }
+}
+
+/* Additional styles for larger phones */
+@media (min-width: 375px) and (max-width: 768px) {
+  .sorcerers-sandbox {
+    padding: 1.5rem;
+  }
+
+  .sandbox-intro h1 {
+    font-size: 2rem;
+  }
+
+  .tab {
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+  }
+} 

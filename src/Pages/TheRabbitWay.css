@@ -1,0 +1,189 @@
+/* src/Pages/TheRabbitWay.css */
+
+/* PAGE WRAPPER & HERO SECTION (same as before) */
+.rabbit-way-page {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--hero-background);
+  color: var(--hero-text-color);
+  overflow: hidden;
+}
+
+.rabbit-way-hero {
+  position: relative;
+  padding: 100px 20px 60px 20px;
+  text-align: center;
+  background: var(--hero-background);
+}
+
+.rabbit-way-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.rabbit-way-hero-title {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: var(--hero-accent-color);
+}
+
+.rabbit-way-hero-subtitle {
+  font-size: 1.4em;
+  margin-bottom: 20px;
+  color: var(--hero-highlight);
+}
+
+.rabbit-way-hero-text {
+  font-size: 1.1em;
+  margin: 0 auto;
+  line-height: 1.6;
+  max-width: 700px;
+  color: var(--hero-text-color);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* GUIDELINES SECTION WRAPPER */
+.rabbit-way-guidelines {
+  background: var(--project-background);
+  padding: 60px 20px 80px 20px;
+  text-align: center;
+  transition: background var(--transition-duration) var(--transition-easing);
+}
+
+.guidelines-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+}
+
+/* CREATIVE MOUSE-INTERACT CARDS */
+.guideline-card {
+  position: relative;
+  width: 100%;
+  height: 340px;
+  background: var(--project-card-bg);
+  box-shadow: 0 8px 20px var(--project-card-shadow);
+  border-radius: 20px;
+  overflow: hidden;
+  /* 3D perspective for tilt effect */
+  transform-style: preserve-3d;
+  will-change: transform;
+  /* Default "glare" position is hidden out of view */
+  --glare-x: -50%;
+  --glare-y: -50%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.guideline-card-content {
+  position: relative;
+  padding: 30px;
+  text-align: left;
+  z-index: 2; /* above the glare */
+  transform: translateZ(30px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.guideline-title {
+  font-size: 1.6em;
+  margin-bottom: 10px;
+  color: var(--hero-accent-color);
+}
+
+.guideline-text {
+  font-size: 1.05em;
+  line-height: 1.6;
+  color: var(--project-highlight-text);
+}
+
+/* GLARE OVERLAY 
+   This "radial gradient" shifts to --glare-x, --glare-y
+   Based on mouse position. 
+*/
+.guideline-glare {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  /* Use a radial gradient for an intense highlight */
+  background: radial-gradient(
+    circle at var(--glare-x) var(--glare-y),
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  transition: background 0.1s;
+  z-index: 1;
+}
+
+/* On hover, the card lifts slightly, 
+   but we handle bigger tilt in JS */
+.guideline-card:hover {
+  box-shadow: 0 15px 30px var(--project-card-shadow);
+}
+
+/* CTA SECTION (unchanged) */
+.rabbit-way-cta {
+  padding: 60px 20px;
+  text-align: center;
+  background: var(--hero-background);
+  transition: background var(--transition-duration) var(--transition-easing);
+}
+
+.rabbit-way-cta-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: var(--hero-accent-color);
+}
+
+.rabbit-way-cta p {
+  font-size: 1.1em;
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--hero-highlight);
+  line-height: 1.6;
+}
+
+.rabbit-way-cta-link {
+  color: var(--hero-accent-color);
+  margin-left: 5px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.rabbit-way-cta-link:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE TWEAKS */
+@media (max-width: 768px) {
+  .rabbit-way-hero-title {
+    font-size: 2.2em;
+  }
+  .rabbit-way-hero-subtitle {
+    font-size: 1.2em;
+  }
+  .guideline-card {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .rabbit-way-hero-title {
+    font-size: 1.8em;
+  }
+  .guideline-card {
+    height: 260px;
+  }
+}

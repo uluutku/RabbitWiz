@@ -20,7 +20,7 @@ function PortfolioPage() {
   return (
     <div className="portfolio-page">
       <header className="portfolio-header">
-        <h1 className="portfolio-title">Spellbook of Enchanted Projects</h1>
+        <h1 className="portfolio-title">Spellbook of All Enchanted Projects</h1>
         <p className="portfolio-subtitle">
           Witness the magic of RabbitWiz—each project is a spell of creativity, code, and consistent branding.
         </p>

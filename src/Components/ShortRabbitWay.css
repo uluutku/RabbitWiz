@@ -1,0 +1,103 @@
+/* src/Components/ShortRabbitWay.css */
+
+.short-rabbit-way {
+    position: relative;
+    padding: 60px 30px;
+    background: var(--hero-background);
+    color: var(--hero-text-color);
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    transition: background var(--transition-duration) var(--transition-easing);
+  }
+  
+  .short-rabbit-way-title {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: var(--hero-accent-color);
+  }
+  
+  .short-rabbit-way-intro {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 0 auto 25px auto;
+    max-width: 700px;
+    color: var(--hero-highlight);
+  }
+  
+  /* The main list */
+  .short-rabbit-way-list {
+    list-style: none;
+    margin: 0 auto 30px auto;
+    padding: 0;
+    max-width: 700px;
+    text-align: left; /* Left-align the bullets for readability */
+  }
+  
+  /* Individual list items */
+  .short-rabbit-way-list li {
+    margin-bottom: 18px;
+    font-size: 1.05em;
+    color: var(--hero-highlight);
+    line-height: 1.4;
+  }
+  
+  /* Provide spacing after strong text to ensure clarity */
+  .short-rabbit-way-list li strong {
+    color: var(--hero-accent-color);
+  }
+  
+  .short-rabbit-way-outro {
+    font-size: 1.1em;
+    color: var(--hero-highlight);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  .short-rabbit-way-link {
+    display: inline-block;
+    margin-left: 6px;
+    color: var(--hero-accent-color);
+    text-decoration: underline;
+    font-weight: 600;
+  }
+  
+  .short-rabbit-way-link:hover {
+    text-decoration: none;
+    color: var(--hero-button-hover-bg);
+  }
+  
+  /* Slightly reduce padding on smaller screens */
+  @media (max-width: 768px) {
+    .short-rabbit-way {
+      padding: 40px 20px;
+    }
+  
+    .short-rabbit-way-title {
+      font-size: 1.8em;
+    }
+  
+    .short-rabbit-way-list {
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .short-rabbit-way {
+      padding: 30px 20px;
+    }
+  
+    .short-rabbit-way-title {
+      font-size: 1.5em;
+    }
+  
+    .short-rabbit-way-intro {
+      font-size: 1em;
+    }
+  
+    .short-rabbit-way-list li {
+      font-size: 0.95em;
+    }
+  }
+  

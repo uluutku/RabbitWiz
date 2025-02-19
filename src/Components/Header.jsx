@@ -1,56 +1,56 @@
 // src/Components/Header.jsx
-import React, { useState, useEffect } from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import rabbitWizardLogo from './newicon.png';
-import { FiMenu, FiX, FiSun, FiMoon } from 'react-icons/fi';
-import './Header.css';
+import React, { useState, useEffect } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { motion } from "framer-motion";
+import rabbitWizardLogo from "./newicon.png";
+import { FiMenu, FiX, FiSun, FiMoon } from "react-icons/fi";
+import "./Header.css";
 
 function Header() {
   const [darkMode, setDarkMode] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  // Toggle dark mode and update body classes
+  // Toggle dark mode
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
     if (!darkMode) {
-      document.body.classList.add('dark-mode');
-      document.body.classList.remove('light-mode');
+      document.body.classList.add("dark-mode");
+      document.body.classList.remove("light-mode");
     } else {
-      document.body.classList.add('light-mode');
-      document.body.classList.remove('dark-mode');
+      document.body.classList.add("light-mode");
+      document.body.classList.remove("dark-mode");
     }
   };
 
-  // Close mobile menu on window resize
+  // Close menu on resize
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 768 && mobileMenuOpen) {
         setMobileMenuOpen(false);
       }
     };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, [mobileMenuOpen]);
 
-  // Set initial theme based on user preference
+  // Set initial theme from user preference
   useEffect(() => {
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     setDarkMode(prefersDark);
     if (prefersDark) {
-      document.body.classList.add('dark-mode');
-      document.body.classList.remove('light-mode');
+      document.body.classList.add("dark-mode");
+      document.body.classList.remove("light-mode");
     } else {
-      document.body.classList.add('light-mode');
-      document.body.classList.remove('dark-mode');
+      document.body.classList.add("light-mode");
+      document.body.classList.remove("dark-mode");
     }
   }, []);
 
   return (
-    <motion.header 
-      className="header" 
-      initial={{ opacity: 0, y: -20 }} 
-      animate={{ opacity: 1, y: 0 }} 
+    <motion.header
+      className="header"
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
       <div className="logo">
@@ -59,7 +59,8 @@ function Header() {
           <span className="logo-text">RabbitWiz</span>
         </Link>
       </div>
-      <nav className={`nav-links ${mobileMenuOpen ? 'open' : ''}`}>
+      <nav className={`nav-links ${mobileMenuOpen ? "open" : ""}`}>
+        {/* Standard RabbitWiz Links */}
         <NavLink to="/" className="nav-link" onClick={() => setMobileMenuOpen(false)}>
           Home
         </NavLink>
@@ -69,12 +70,26 @@ function Header() {
         <NavLink to="/about" className="nav-link" onClick={() => setMobileMenuOpen(false)}>
           About
         </NavLink>
-        <NavLink to="/ai" className="nav-link" onClick={() => setMobileMenuOpen(false)}>
-          AI Research
+        <NavLink
+          to="/the-rabbit-way"
+          className="nav-link"
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          The Rabbit Way
+        </NavLink>
+        {/* Visual Separator */}
+        <span className="nav-separator">|</span>
+        {/* “Experiment” (AI Quarters) Link */}
+        <NavLink
+          to="/sorcerers-sandbox"
+          className="nav-link experiment-link"
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          <span className="experiment-badge">Sorcerers Sandbox</span>
         </NavLink>
       </nav>
       <div className="theme-switcher" onClick={toggleDarkMode}>
-        <div className={`dark-mode-btn ${darkMode ? 'dark' : 'light'}`}>
+        <div className={`dark-mode-btn ${darkMode ? "dark" : "light"}`}>
           {darkMode ? <FiMoon size={22} /> : <FiSun size={22} />}
         </div>
       </div>

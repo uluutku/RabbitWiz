@@ -1,0 +1,43 @@
+/* src/Components/AIProjectCard.css */
+.ai-project-card {
+    background-color: var(--ai-card-bg, #ffffff);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .ai-project-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .ai-project-image-wrapper {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .ai-project-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .ai-project-card:hover .ai-project-image {
+    transform: scale(1.05);
+  }
+  
+  .ai-project-content {
+    padding: 20px;
+  }
+  
+  .ai-project-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .ai-project-description {
+    font-size: 1em;
+    color: var(--ai-desc-color, #555555);
+  }
+  

@@ -15,3 +15,76 @@ body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
 }
+
+.detailed-project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Adjust button colors and hover effects to match the RabbitWiz palette */
+.view-details-button {
+  background-color: var(--detailed-accent-color);
+  color: #ffffff;
+  padding: 12px 20px;
+  margin: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color var(--transition-duration) var(--transition-easing);
+}
+
+.view-details-button:hover {
+  background-color: #7a48b7;
+}
+
+/* Global Scrollbar Styles */
+
+/* Firefox */
+body, .project-detail-container, .portfolio-content, .ai-projects-content {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+/* Define variables for scrollbar colors */
+:root {
+  /* Dark Mode Scrollbar Colors */
+  --scrollbar-thumb-dark: rgba(155, 93, 229, 0.6);
+  --scrollbar-track-dark: transparent;
+
+  /* Light Mode Scrollbar Colors */
+  --scrollbar-thumb-light: rgba(0, 122, 204, 0.6);
+  --scrollbar-track-light: transparent;
+}
+
+/* Set active variables based on theme */
+body.dark-mode {
+  --scrollbar-thumb: var(--scrollbar-thumb-dark);
+  --scrollbar-track: var(--scrollbar-track-dark);
+}
+
+body.light-mode {
+  --scrollbar-thumb: var(--scrollbar-thumb-light);
+  --scrollbar-track: var(--scrollbar-track-light);
+}
+
+/* WebKit Browsers */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb);
+  opacity: 0.8;
+}

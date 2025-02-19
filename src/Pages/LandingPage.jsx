@@ -1,14 +1,16 @@
-import React from "react";
-import "./LandingPage.css";
-import Hero from "../Components/Hero";
-import Projects from "../Components/Projects";
+// src/Pages/LandingPage.jsx
+import React from 'react';
+import Hero from '../Components/Hero';
+import BrandStory from '../Components/BrandStory';
+import Projects from '../Components/Projects';
+import './LandingPage.css';
 
 function LandingPage() {
   return (
-    <div>
+    <div className="landing-page">
       <Hero />
+      <BrandStory />
       <Projects />
-
     </div>
   );
 }

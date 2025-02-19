@@ -1,9 +1,18 @@
-import './DetailedProjectCard.css';
+// src/Components/DetailedProjectCard.jsx
+import React from 'react';
+import { motion } from 'framer-motion';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
+import './DetailedProjectCard.css';
 
 function DetailedProjectCard({ project, onClick }) {
   return (
-    <div className="detailed-project-card">
+    <motion.div 
+      className="detailed-project-card"
+      onClick={() => onClick(project)}
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
+      transition={{ duration: 0.3 }}
+    >
       <div className="project-image-wrapper" onClick={() => onClick(project)}>
         <img src={project.img} alt={project.title} className="project-image" />
         <div className="overlay">
@@ -29,7 +38,7 @@ function DetailedProjectCard({ project, onClick }) {
           </a>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

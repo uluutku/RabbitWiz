@@ -1,14 +1,15 @@
-// Projects.jsx
-import React from 'react';
-import './Projects.css';
-import projectData from './projectData'; // Contains your project details
+// src/Components/Projects.jsx
+import React from "react";
+import "./Projects.css";
+import projectData from "./projectData"; // your project details
 
 function Projects() {
   return (
     <section className="projects">
-      <h2 className="projects-title">Our Rabbit's Recent Projects</h2>
+      <h2 className="projects-title">Spellbook of Enchanted Projects</h2>
       <p className="projects-subtitle">
-        Discover the magical projects our wizard rabbit has been crafting. Click to explore!
+        Each of these creations is woven with RabbitWiz magic—click to explore the front-end
+        wizardry and consistent branding in action!
       </p>
       <div className="projects-grid">
         {projectData.map((project) => (

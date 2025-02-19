@@ -1,8 +1,26 @@
-// projectData.js
+// src/Components/projectData.js
+
+// Main thumbnail imports
 import RabbitFlixThumb from './rabbitflix-new-thumb.jpg';
 import PawPickerThumb from './pawpicker-thumb.jpg';
 import CarrotCrossroadsThumb from './carrot-crossroads.png';
 import DicesNRabbitsThumb from './dicesnrtabbits.png';
+
+// Screenshot imports for Dices&Rabbits
+import DicesNRabbitsScreen1 from './dicesnrtabbits.png';
+import DicesNRabbitsScreen2 from './dicesnrtabbits.png';
+
+// Screenshot imports for RabbitFlix
+import RabbitFlixScreen1 from './rabbitflix-new-thumb.jpg';
+import RabbitFlixScreen2 from './rabbitflix-new-thumb.jpg';
+
+// Screenshot imports for Carrot Crossroads
+import CarrotCrossroadsScreen1 from './carrot-crossroads.png';
+import CarrotCrossroadsScreen2 from './carrot-crossroads.png';
+
+// Screenshot imports for PawPicker
+import PawPickerScreen1 from './pawpicker-thumb.jpg';
+import PawPickerScreen2 from './pawpicker-thumb.jpg';
 
 const projectData = [
   {
@@ -23,8 +41,8 @@ const projectData = [
     ],
     github: 'https://github.com/uluutku/rabbitflix',
     screenshots: [
-      './rabbitflix-new-thumb.jpg',
-      './rabbitflix-new-thumb.jpg',
+      DicesNRabbitsScreen1,
+      DicesNRabbitsScreen2,
     ],
   },
   {
@@ -45,8 +63,8 @@ const projectData = [
     ],
     github: 'https://github.com/uluutku/rabbitflix',
     screenshots: [
-      './rabbitflix-new-thumb.jpg',
-      './rabbitflix-new-thumb.jpg',
+      RabbitFlixScreen1,
+      RabbitFlixScreen2,
     ],
   },
   {
@@ -67,8 +85,8 @@ const projectData = [
     ],
     github: 'https://github.com/uluutku/carrot-crossroads',
     screenshots: [
-      './rabbitflix-new-thumb.jpg',
-      './rabbitflix-new-thumb.jpg',
+      CarrotCrossroadsScreen1,
+      CarrotCrossroadsScreen2,
     ],
   },
   {
@@ -89,8 +107,8 @@ const projectData = [
     ],
     github: 'https://github.com/uluutku/pawpicker',
     screenshots: [
-      './rabbitflix-new-thumb.jpg',
-      './rabbitflix-new-thumb.jpg',
+      PawPickerScreen1,
+      PawPickerScreen2,
     ],
   },
 ];

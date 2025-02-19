@@ -1,23 +1,24 @@
+// src/App.jsx
 import { useRoutes, Navigate } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { AnimatePresence, motion } from "framer-motion";
 import LandingPage from "./Pages/LandingPage";
+import AboutPage from "./Pages/AboutPage";
+import PortfolioPage from "./Pages/PortfolioPage";
+import AIProjectsPage from "./Pages/AIProjectsPage"; // New AI Projects page
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
-import AboutPage from "./Pages/AboutPage";
 import "./App.css";
-import PortfolioPage from "./Pages/PortfolioPage";
 
-// Create a QueryClient instance for react-query
 const queryClient = new QueryClient();
 
 function App() {
-  // Define routes using useRoutes for a cleaner approach
   const routes = useRoutes([
     { path: "/", element: <LandingPage /> },
     { path: "/about", element: <AboutPage /> },
     { path: "/portfolio", element: <PortfolioPage /> },
+    { path: "/ai", element: <AIProjectsPage /> }, // New route for AI projects
     { path: "*", element: <Navigate to="/" /> },
   ]);
 
@@ -26,7 +27,7 @@ function App() {
       <QueryClientProvider client={queryClient}>
         <div className="app">
           <Header />
-          {/* AnimatePresence enables animations when routes change */}
+          {/* AnimatePresence for page transitions */}
           <AnimatePresence mode="wait">
             <motion.div
               key={location.pathname}

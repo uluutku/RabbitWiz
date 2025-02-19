@@ -1,0 +1,31 @@
+/* src/Components/BrandStory.css */
+.brand-story {
+    background-color: var(--hero-background);
+    color: var(--hero-text-color);
+    padding: 60px 40px;
+    text-align: center;
+    transition: background var(--transition-duration) var(--transition-easing);
+  }
+  
+  .brand-story-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .brand-story-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: var(--hero-accent-color);
+  }
+  
+  .brand-story-text {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: var(--hero-highlight);
+  }
+  
+  .brand-story-text strong {
+    color: var(--hero-accent-color);
+  }
+  

@@ -1,0 +1,40 @@
+/* PerformanceFocusedCard.css */
+.performance-card {
+    width: 200px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .rabbit {
+    font-size: 2em;
+    position: absolute;
+    left: -50px;
+    transition: left 0.5s ease;
+  }
+  
+  .performance-card:hover .rabbit {
+    left: 250px;
+  }
+  
+  .performance-card:hover::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: repeating-linear-gradient(
+      to right,
+      transparent,
+      transparent 10px,
+      #fff 10px,
+      #fff 20px
+    );
+    animation: trail 0.5s linear infinite;
+  }
+  
+  @keyframes trail {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(20px); }
+  }

@@ -1,0 +1,31 @@
+/* ResponsivenessIsMagicCard.css */
+.responsive-card {
+    width: 300px;
+    height: 200px;
+    background: #fff;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+    cursor: pointer;
+  }
+  
+  .responsive-card.desktop {
+    width: 300px;
+    height: 200px;
+  }
+  
+  .responsive-card.tablet {
+    width: 200px;
+    height: 250px;
+  }
+  
+  .responsive-card.mobile {
+    width: 100px;
+    height: 150px;
+  }
+  
+  .content {
+    font-size: 1.2em;
+  }

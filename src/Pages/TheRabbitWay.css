@@ -1,189 +1,152 @@
 /* src/Pages/TheRabbitWay.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-/* PAGE WRAPPER & HERO SECTION (same as before) */
 .rabbit-way-page {
   width: 100%;
   min-height: 100vh;
-  background: var(--hero-background);
-  color: var(--hero-text-color);
+  background: #1a1a2e; /* Dark theme for magic vibe */
+  color: #e6e6e6;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Hero Section */
+.rabbit-way-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 50px;
   overflow: hidden;
 }
 
-.rabbit-way-hero {
-  position: relative;
-  padding: 100px 20px 60px 20px;
-  text-align: center;
-  background: var(--hero-background);
+.hero-content {
+  max-width: 600px;
 }
 
-.rabbit-way-hero-content {
-  max-width: 800px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 2;
-}
-
-.rabbit-way-hero-title {
-  font-size: 3em;
+.hero-title {
+  font-size: 4em;
   margin-bottom: 20px;
-  color: var(--hero-accent-color);
 }
 
-.rabbit-way-hero-subtitle {
+.hero-title span {
+  color: #ff6f61; /* Rabbit accent color */
+}
+
+.hero-subtitle {
   font-size: 1.4em;
-  margin-bottom: 20px;
-  color: var(--hero-highlight);
+  color: #b0b0b0;
 }
 
-.rabbit-way-hero-text {
-  font-size: 1.1em;
-  margin: 0 auto;
-  line-height: 1.6;
-  max-width: 700px;
-  color: var(--hero-text-color);
-  background: rgba(255, 255, 255, 0.05);
-  padding: 15px;
-  border-radius: 8px;
+.hero-illustration img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* GUIDELINES SECTION WRAPPER */
-.rabbit-way-guidelines {
-  background: var(--project-background);
-  padding: 60px 20px 80px 20px;
+/* Guidelines Section */
+.guidelines {
+  padding: 80px 50px;
+  background: #16213e;
   text-align: center;
-  transition: background var(--transition-duration) var(--transition-easing);
+}
+
+.guidelines-title {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #ff6f61;
 }
 
 .guidelines-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-  list-style: none;
-  padding: 0;
+  gap: 40px;
 }
 
-/* CREATIVE MOUSE-INTERACT CARDS */
 .guideline-card {
-  position: relative;
-  width: 100%;
-  height: 340px;
-  background: var(--project-card-bg);
-  box-shadow: 0 8px 20px var(--project-card-shadow);
-  border-radius: 20px;
+  background: #0f3460;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   overflow: hidden;
-  /* 3D perspective for tilt effect */
-  transform-style: preserve-3d;
-  will-change: transform;
-  /* Default "glare" position is hidden out of view */
-  --glare-x: -50%;
-  --glare-y: -50%;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.guideline-card-content {
-  position: relative;
-  padding: 30px;
-  text-align: left;
-  z-index: 2; /* above the glare */
-  transform: translateZ(30px);
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.guideline-icon {
+  font-size: 2.5em;
+  color: #ff6f61;
+  margin-bottom: 15px;
 }
 
 .guideline-title {
   font-size: 1.6em;
   margin-bottom: 10px;
-  color: var(--hero-accent-color);
+  color: #ff6f61;
 }
 
-.guideline-text {
-  font-size: 1.05em;
-  line-height: 1.6;
-  color: var(--project-highlight-text);
+.guideline-description {
+  font-size: 1em;
+  color: #e6e6e6;
 }
 
-/* GLARE OVERLAY 
-   This "radial gradient" shifts to --glare-x, --glare-y
-   Based on mouse position. 
-*/
-.guideline-glare {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  /* Use a radial gradient for an intense highlight */
-  background: radial-gradient(
-    circle at var(--glare-x) var(--glare-y),
-    rgba(255, 255, 255, 0.5) 0%,
-    rgba(255, 255, 255, 0) 60%
-  );
-  transition: background 0.1s;
-  z-index: 1;
+.guideline-effect {
+  margin-top: 20px;
+  height: 200px; /* Adjust per effect */
 }
 
-/* On hover, the card lifts slightly, 
-   but we handle bigger tilt in JS */
-.guideline-card:hover {
-  box-shadow: 0 15px 30px var(--project-card-shadow);
-}
-
-/* CTA SECTION (unchanged) */
-.rabbit-way-cta {
-  padding: 60px 20px;
+/* CTA Section */
+.cta {
+  padding: 60px 40px;
   text-align: center;
-  background: var(--hero-background);
-  transition: background var(--transition-duration) var(--transition-easing);
+  background: #1a1a2e;
 }
 
-.rabbit-way-cta-title {
+.cta-title {
   font-size: 2em;
   margin-bottom: 20px;
-  color: var(--hero-accent-color);
+  color: #ff6f61;
 }
 
-.rabbit-way-cta p {
-  font-size: 1.1em;
-  max-width: 700px;
-  margin: 0 auto;
-  color: var(--hero-highlight);
-  line-height: 1.6;
+.cta-message {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  color: #b0b0b0;
 }
 
-.rabbit-way-cta-link {
-  color: var(--hero-accent-color);
-  margin-left: 5px;
-  font-weight: 600;
+.cta-button {
+  padding: 15px 30px;
+  background: #ff6f61;
+  color: #fff;
   text-decoration: none;
+  font-size: 1em;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
-.rabbit-way-cta-link:hover {
-  text-decoration: underline;
+.cta-button:hover {
+  background: #e65a50;
+  transform: translateY(-5px);
 }
 
-/* RESPONSIVE TWEAKS */
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .rabbit-way-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-illustration {
+    margin-top: 50px;
+  }
+}
+
 @media (max-width: 768px) {
-  .rabbit-way-hero-title {
-    font-size: 2.2em;
+  .rabbit-way-hero {
+    padding: 80px 30px;
   }
-  .rabbit-way-hero-subtitle {
-    font-size: 1.2em;
+  .hero-title {
+    font-size: 3em;
   }
-  .guideline-card {
-    height: 300px;
-  }
-}
-
-@media (max-width: 480px) {
-  .rabbit-way-hero-title {
-    font-size: 1.8em;
-  }
-  .guideline-card {
-    height: 260px;
+  .guidelines {
+    padding: 60px 20px;
   }
 }

@@ -1,0 +1,19 @@
+/* TestEarlyAndOftenCard.css */
+.test-card {
+    width: 200px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .rabbit {
+    font-size: 2em;
+    position: absolute;
+    bottom: 0;
+    left: -50px;
+    transition: left 1s ease;
+  }
+  
+  .test-card:hover .rabbit {
+    left: 250px;
+  }

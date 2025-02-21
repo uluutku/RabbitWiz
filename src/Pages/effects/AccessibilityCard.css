@@ -1,0 +1,18 @@
+/* AccessibilityCard.css */
+.accessibility-card {
+    width: 200px;
+    height: 100px;
+    background: #fff;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .accessibility-card.accessible {
+    font-size: 1.5em;
+    background: #000;
+    color: #fff;
+  }

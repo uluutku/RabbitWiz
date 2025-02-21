@@ -166,6 +166,78 @@
   }
 }
 
+/* Updated styles for the disabled GitHub link */
+.github-link.disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  background: var(--button-background);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.github-link.disabled:hover {
+  transform: none;
+  background: var(--button-background);
+  box-shadow: 0 0 15px rgba(var(--accent-rgb), 0.2);
+}
+
+.github-link.disabled::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(var(--accent-rgb), 0.2),
+    transparent
+  );
+  animation: shine 2s infinite;
+}
+
+.github-link.disabled::after {
+  content: 'Coming Soon';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-color);
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--background-color);
+}
+
+.github-link.disabled:hover::after {
+  transform: translateY(0);
+}
+
+.github-link.disabled span {
+  opacity: 0.8;
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Update the regular github-link styles to match */
 .github-link {
   display: inline-flex;
   align-items: center;
@@ -177,11 +249,14 @@
   text-decoration: none;
   border-radius: 6px;
   transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-weight: 500;
 }
 
 .github-link:hover {
   background: var(--button-hover-background);
   transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 768px) {

@@ -21,7 +21,7 @@ function SorcerersSandbox() {
         description: "A sophisticated frontend for the DeepSeek-R1 model running locally via Ollama. Features advanced prompt engineering, RAG capabilities, and multi-turn refinement for enhanced AI interactions.",
         status: "Active Development",
         tech: ["React", "Node.js", "Ollama", "DeepSeek-R1"],
-        github: "https://github.com/yourusername/deepseek-explorer",
+        github: "coming-soon",
       },
       {
         title: "RAG Enhancement Suite",
@@ -77,6 +77,26 @@ function SorcerersSandbox() {
         tech: ["React", "D3.js", "TensorFlow.js"],
       }
     ]
+  };
+
+  const renderGithubLink = (github) => {
+    if (!github) return null;
+    
+    if (github === "coming-soon") {
+      return (
+        <span className="github-link disabled">
+          <span>
+            <AiFillGithub /> View on GitHub
+          </span>
+        </span>
+      );
+    }
+
+    return (
+      <a href={github} className="github-link" target="_blank" rel="noopener noreferrer">
+        <AiFillGithub /> View on GitHub
+      </a>
+    );
   };
 
   return (
@@ -156,11 +176,7 @@ function SorcerersSandbox() {
                     <span key={tech} className="tech-tag">{tech}</span>
                   ))}
                 </div>
-                {project.github && (
-                  <a href={project.github} className="github-link" target="_blank" rel="noopener noreferrer">
-                    <AiFillGithub /> View on GitHub
-                  </a>
-                )}
+                {renderGithubLink(project.github)}
               </motion.div>
             ))}
           </motion.div>

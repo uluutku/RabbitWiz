@@ -151,10 +151,10 @@ body.light-mode {
     margin-bottom: 40px;
   }
   .project-card-3d {
-    height: 420px;
+    height: 520px;
   }
   .project-image {
-    height: 260px;
+    height: 360px;
   }
 }
 
@@ -169,9 +169,9 @@ body.light-mode {
     font-size: 0.9em;
   }
   .project-card-3d {
-    height: 380px;
+    height: 480px;
   }
   .project-image {
-    height: 220px;
+    height: 320px;
   }
 }
